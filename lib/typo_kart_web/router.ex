@@ -17,8 +17,7 @@ defmodule TypoKartWeb.Router do
   scope "/", TypoKartWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-    live "/clock", ClockLive
+    live "/", CourseLive
   end
 
   # Other scopes may use custom stacks.

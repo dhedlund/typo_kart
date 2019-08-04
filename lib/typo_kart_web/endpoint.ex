@@ -2,7 +2,7 @@ defmodule TypoKartWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :typo_kart
 
   socket "/socket", TypoKartWeb.UserSocket,
-    websocket: true,
+    websocket: [timeout: 45_000],
     longpoll: false
 
   socket "/live", Phoenix.LiveView.Socket
